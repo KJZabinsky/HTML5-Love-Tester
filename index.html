@@ -1,0 +1,219 @@
+<style>
+      h1 {
+        text-align: center;
+        color: red;
+        text-shadow: 0 0 5px #fff, 0 0 10px #e60073;
+      }
+      .borderless {
+  border: none;
+  outline: none;
+}
+
+    </style>
+        <style>
+      .textarea1 {
+        width: 50%;
+        height: 10px;
+        font-size: 16px;
+        font-family: Arial;
+        padding: 10px;
+        border-radius: 5px;
+        border: 3px solid #293437;
+        resize: none;
+      }
+    </style>
+<style>
+      body {
+        background: #293437;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        font-family: 'Astloch';
+      }
+      .text {
+        color: red;
+        font-family: 'Astloch', sans-serif;
+        font-size: 40px;
+        transition: 0.5s ease;
+        text-align: center;
+      }
+      .text2 {
+        color: #93E5BE;
+        font-family: 'Astloch', sans-serif;
+        font-size: 30px;
+        transition: 0.5s ease;
+        text-align: center;
+      }
+      .text3 {
+        color: #93E5BE;
+        font-family: 'Astloch', sans-serif;
+        font-size: 40px;
+        transition: 0.5s ease;
+        text-align: center;
+      }
+      div {
+        background: white;
+        padding: 10px;
+        border-radius: 10px;
+      }
+      @keyframes fly {
+        0% { transform: translate(0px,0px) rotate(0deg); }
+        25% { transform: translate(0px,0px) rotate(20deg); }
+        50% { transform: translate(0px,0px) rotate(-20deg); }
+        75% { transform: translate(0px 0px) rotate(0deg); }
+        100% { transform: translate(0px,0px) rotate(0deg); }
+      }
+      @keyframes down {
+        0% { transform: translate(0px,0px) rotate(0deg); }
+        25% { transform: translate(0px,0px) rotate(0deg); }
+        50% { transform: translate(0px,0px) rotate(0deg); }
+        75% { transform: translate(0px 0px) rotate(0deg); }
+        100% { transform: translate(0px,0px) rotate(0deg); }
+      }
+      @media only screen and (max-width: 768px) {
+        body {
+          margin-left: 5%;
+          margin-right: 5%;
+        }
+      }
+    </style>
+    <style>
+      body {
+        text-align: center;
+      }
+      
+      h1 {
+        font-size: 2em;
+        margin-top: 20px;
+      }
+      
+      p {
+        font-size: 1.2em;
+      }
+      
+      textarea {
+        width: 80%;
+        height: 100px;
+        font-size: 1.2em;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+      
+      input[type="number"] {
+        font-size: 1.2em;
+        padding: 5px;
+        width: 20%;
+        margin-bottom: 10px;
+      }
+      
+      button {
+        font-size: 1.2em;
+        padding: 10px 20px;
+        margin-right: 10px;
+      }
+      
+      #output {
+        width: 80%;
+        height: 100px;
+        font-size: 1.2em;
+        padding: 10px;
+        font-family: "Courier New", Courier, monospace;
+      }
+    </style>
+<script LANGUAGE="JavaScript">
+function calc() {
+first = document.loveform.name1.value.toUpperCase();
+firstlength = document.loveform.name1.value.length;
+second = document.loveform.name2.value.toUpperCase();
+secondlength = document.loveform.name2.value.length;
+var LoveCount=0;
+for (Count=0; Count < firstlength; Count++) {
+
+letter1=first.substring(Count,Count+1);
+
+if (letter1=='B') LoveCount+=2; 
+if (letter1=='L') LoveCount+=2; 
+if (letter1=='G') LoveCount+=2;
+if (letter1=='K') LoveCount+=3; 
+if (letter1=='E') LoveCount+=3; 
+if (letter1=='X') LoveCount+=1; 
+if (letter1=='J') LoveCount+=3;
+}
+
+
+for (Count=0; Count < secondlength; Count++) {
+letter2=second.substring(Count,Count+1);
+if (letter2=='B') LoveCount+=2;
+if (letter2=='L') LoveCount+=2; 
+if (letter2=='G') LoveCount+=2; 
+if (letter2=='K') LoveCount+=3;
+if (letter2=='Y') LoveCount+=3;
+if (letter2=='R') LoveCount+=1;
+if (letter2=='J') LoveCount+=3;
+}
+
+amount=0;
+
+if (LoveCount> 0) amount=  5-((firstlength+secondlength)/2)
+if (LoveCount> 2) amount= 10-((firstlength+secondlength)/2)
+if (LoveCount> 4) amount= 20-((firstlength+secondlength)/2)
+if (LoveCount> 6) amount= 30-((firstlength+secondlength)/2)
+if (LoveCount> 8) amount= 40-((firstlength+secondlength)/2)
+
+if (LoveCount>10) amount= 50-((firstlength+secondlength)/2)
+
+if (LoveCount>12) amount= 60-((firstlength+secondlength)/2)
+if (LoveCount>14) amount= 70-((firstlength+secondlength)/2)
+if (LoveCount>16) amount= 80-((firstlength+secondlength)/2)
+if (LoveCount>18) amount= 90-((firstlength+secondlength)/2)
+if (LoveCount>20) amount=100-((firstlength+secondlength)/2)
+if (LoveCount>22) amount=110-((firstlength+secondlength)/2)
+if (firstlength==0 || secondlength==0) amount= "NRT";
+if (amount < 0) amount= 0;
+if (amount >99) amount=99;
+
+document.loveform.output.value=amount+"% Chance";
+
+}
+
+
+</script>
+<center><table width=600 cellpadding=1 cellspacing=0 border=0><tr>
+<td align=center valign=top>
+</TD>
+</TR></TABLE>
+</CENTER> 
+
+<DIV align="center"><CENTER>
+<P class="text"><STRONG>Love Tester V2</p>
+<FORM name="loveform">
+
+  <P><INPUT value="" name="name1" type="text" size="20">  + <INPUT
+
+  value="" name="name2" type="text" size="20"><BR>
+
+  <BR>
+
+  <INPUT value="Calculate" name="calculate" type="button" value="calculate"
+
+  onclick="calc()"> </P>
+  
+  <b><textarea class="borderless" id="output" style="resize: none; font-size: 65px; text-align: center;" type="text" name="output" rows="5" cols="5" readonly></textarea>
+
+
+
+
+</FORM>
+
+  </CENTER></DIV>
+<script>
+  var colors = ["red", "green", "blue", "yellow", "orange"];
+  var index = 0;
+  var textarea = document.getElementById("output");
+  
+  setInterval(function() {
+    textarea.style.color = colors[index];
+    index = (index + 1) % colors.length;
+  }, 1000); // execute the function every 1000 milliseconds (i.e., every 1 second)
+</script>
